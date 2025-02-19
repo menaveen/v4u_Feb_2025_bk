@@ -1,0 +1,43 @@
+
+type Query {
+    companyById(id: String!): Company,
+    job(id: String!): Job,
+    jobs(limit: Int, offset: Int): JobSubList
+}
+
+type JobSubList {
+    items: [Job!]!,
+    totalCount: Int!
+}
+
+type Mutation {
+    createJob(input: CreateJobInput): Job,
+    updateJob(input: UpdateJobInput): Job,
+    deleteJob(id: String!): Job,
+}
+input UpdateJobInput {
+    id: String!,
+    title: String!,
+    description: String
+}
+input CreateJobInput {
+    title: String!,
+    description: String
+}
+"""
+Represent a job ad posted to our board.
+"""
+type Job {
+    id : String!,
+    title : String!,
+    companyId : String!,
+    company : Company,
+    date : String!,
+    description : String
+}
+type Company {
+    id : String!,
+    name : String!,
+    jobs : [Job!]!,
+    description : String
+}

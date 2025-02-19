@@ -1,0 +1,12 @@
+/**
+ create job
+ input value
+ ----------------
+ {
+  "input": {
+    "id":"f3YzmnBZpK0o",
+    "title": "Bob title",
+    "description":"Bob desc"
+  }
+}
+ */
