@@ -5,3 +5,4 @@ video editing
 
 Adding new features
 user management
+checking and testing features
